@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta name="viewport" content="width=device-width"/>
+
+    <title>Geotech v1.0</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .app-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .app-link {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <iframe id="appframe" class="app-container"></iframe>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <script>
+        document.getElementById('appframe').src = 'https://www.appsheet.com/start/0da5ba57-fd77-410b-87ab-e12945036773'; 
+        document.getElementById('appframe').onload = function() {
+            document.getElementsByClassName('app-link')[0].style.display = 'none';
+        };
+    </script>
+</body>
+</html>
